@@ -18,7 +18,7 @@ jobs:
         run: npm test -- --coverage --watchAll=false
   deploy:
    #(normally you'd not deploy until functional tests were complete)
-    needs: [deploy]
+    needs: [function_test]
     runs-on: ubuntu-latest
     defaults:
       run:
